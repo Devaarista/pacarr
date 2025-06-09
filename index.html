@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Untuk Najwa Sayang 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      overflow: hidden;
+      background: linear-gradient(to top, #ffe0ec, #ffd9f7);
+    }
+
+    .clouds {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.ibb.co/gFZ8ZwG/clouds.png') repeat-x;
+      animation: cloudMove 60s linear infinite;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    @keyframes cloudMove {
+      from { background-position-x: 0; }
+      to { background-position-x: 1000px; }
+    }
+
+    .card {
+      background: white;
+      border-radius: 25px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      margin: 100px auto;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.3em;
+      color: #ff69b4;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-top: 15px;
+      color: #555;
+    }
+
+    .heart {
+      font-size: 3em;
+      color: red;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.3); }
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff2c91;
+      transform: scale(1.05);
+    }
+
+    .char-img {
+      width: 120px;
+      margin-top: 20px;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #fff0f6;
+      border: 2px dashed #ff69b4;
+      padding: 25px;
+      border-radius: 20px;
+      font-size: 1.1em;
+      color: #d63384;
+      z-index: 10;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.5s ease;
+    }
+
+    .popup.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="clouds"></div>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Hai Najwa!</h1>
+    <p>Kamu seperti pelangi setelah hujan... bikin hidupku lebih ceria 🎨🌈</p>
+    <img class="char-img" src="https://i.ibb.co/t2wZfwj/cute-love.png" alt="Cute Character" />
+    <button class="btn" onclick="alert('Aku sayang kamu banget 😘')">Klik aku~</button>
+  </div>
+
+  <div class="popup" id="loveNote">
+    💌 Kamu itu spesial banget, tau nggak? Jangan pernah lupa kalau Deva selalu ada buat kamu! 💖
+  </div>
+
+  <!-- Musik latar: instrumental mirip lagu Blue - yung kai -->
+  <iframe width="0" height="0"
+    src="https://www.youtube.com/embed/egMz9zjiHEk?autoplay=1&loop=1&playlist=egMz9zjiHEk"
+    frameborder="0" allow="autoplay" allow="loop" allowfullscreen>
+  </iframe>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loveNote").classList.add("show");
+    }, 6000);
+  </script>
+</body>
+</html>
